@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ghost Runner — Race yourself on Even G2</title>
+  <meta name="description" content="Ghost Runner for Even Realities G2 smart glasses. Race your previous lap's ghost in real-time while running.">
+  <link rel="icon" type="image/png" href="icon.png">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #0a0a0a;
+      color: #eee;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 80px 24px 40px;
+      text-align: center;
+      max-width: 600px;
+    }
+    .icon {
+      width: 128px;
+      height: 128px;
+      image-rendering: pixelated;
+      border-radius: 28px;
+      margin-bottom: 24px;
+    }
+    h1 {
+      font-size: 36px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: #4ec44e;
+      margin-bottom: 8px;
+    }
+    .tagline {
+      font-size: 18px;
+      color: #888;
+      margin-bottom: 32px;
+      line-height: 1.5;
+    }
+    .badges {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 40px;
+    }
+    .badge {
+      background: #1a1a1a;
+      border: 1px solid #333;
+      border-radius: 8px;
+      padding: 8px 16px;
+      font-size: 13px;
+      color: #aaa;
+    }
+    .badge strong { color: #4ec44e; }
+    .features {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      max-width: 500px;
+      margin-bottom: 40px;
+    }
+    @media (max-width: 500px) { .features { grid-template-columns: 1fr; } }
+    .feature {
+      background: #141414;
+      border: 1px solid #222;
+      border-radius: 12px;
+      padding: 20px;
+    }
+    .feature h3 {
+      font-size: 14px;
+      color: #4ec44e;
+      margin-bottom: 6px;
+    }
+    .feature p {
+      font-size: 13px;
+      color: #777;
+      line-height: 1.5;
+    }
+    .cta {
+      display: inline-block;
+      background: #4ec44e;
+      color: #000;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 16px;
+      padding: 14px 32px;
+      border-radius: 12px;
+      margin-bottom: 16px;
+      transition: opacity 0.2s;
+    }
+    .cta:hover { opacity: 0.85; }
+    .cta-secondary {
+      display: inline-block;
+      color: #4ec44e;
+      text-decoration: none;
+      font-size: 14px;
+      padding: 8px 16px;
+      border: 1px solid #333;
+      border-radius: 8px;
+      margin-bottom: 40px;
+      transition: border-color 0.2s;
+    }
+    .cta-secondary:hover { border-color: #4ec44e; }
+    .how-it-works {
+      max-width: 500px;
+      padding: 0 24px;
+      margin-bottom: 60px;
+    }
+    .how-it-works h2 {
+      font-size: 20px;
+      color: #eee;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .step {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+    .step-num {
+      background: #4ec44e;
+      color: #000;
+      font-weight: 700;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      flex-shrink: 0;
+    }
+    .step-text {
+      font-size: 14px;
+      color: #aaa;
+      line-height: 1.5;
+      padding-top: 3px;
+    }
+    .step-text strong { color: #eee; }
+    footer {
+      border-top: 1px solid #1a1a1a;
+      padding: 24px;
+      text-align: center;
+      width: 100%;
+      max-width: 600px;
+    }
+    footer a {
+      color: #555;
+      text-decoration: none;
+      font-size: 13px;
+      margin: 0 12px;
+    }
+    footer a:hover { color: #4ec44e; }
+  </style>
+</head>
+<body>
+  <div class="hero">
+    <img src="icon.png" alt="Ghost Runner" class="icon">
+    <h1>GHOST RUNNER</h1>
+    <p class="tagline">Race the ghost of your previous lap.<br>Real-time on Even Realities G2 smart glasses.</p>
+    <div class="badges">
+      <span class="badge"><strong>G2</strong> Smart Glasses</span>
+      <span class="badge"><strong>GPS</strong> Lap Tracking</span>
+      <span class="badge"><strong>Live</strong> Ghost Pacer</span>
+    </div>
+    <div class="features">
+      <div class="feature">
+        <h3>Ghost Racing</h3>
+        <p>Your previous lap becomes a ghost pacer. See exactly where you were and race to beat it.</p>
+      </div>
+      <div class="feature">
+        <h3>Live Map</h3>
+        <p>Your route, ghost position, and real-time stats rendered directly on the glasses display.</p>
+      </div>
+      <div class="feature">
+        <h3>Lap Detection</h3>
+        <p>Automatic lap detection with split times, best lap tracking, and completion notifications.</p>
+      </div>
+      <div class="feature">
+        <h3>Self-Contained</h3>
+        <p>iOS companion app runs the server. No WiFi or Mac needed. Just your phone and glasses.</p>
+      </div>
+    </div>
+    <a class="cta" href="#">Coming Soon on the App Store</a>
+    <a class="cta-secondary" href="#">Available on Even Hub</a>
+  </div>
+
+  <div class="how-it-works">
+    <h2>How It Works</h2>
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-text"><strong>Install the iOS app</strong> and open Even Hub on your G2 glasses</div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-text"><strong>Start a run</strong> in the companion app — GPS tracking begins automatically</div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-text"><strong>Complete a lap</strong> and your ghost appears — race yourself lap after lap</div>
+    </div>
+  </div>
+
+  <footer>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="mailto:dev@runningstory.com">Support</a>
+  </footer>
+</body>
+</html>

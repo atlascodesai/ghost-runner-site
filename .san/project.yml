@@ -10,3 +10,8 @@ repository:
     - https://github.com/atlascodesai/ghost-runner-site.git
 integrations:
   copy: []
+  analytics:
+    provider: goatcounter
+    siteId: ghostrunner
+    publicDashboard: https://ghostrunner.goatcounter.com
+    searchConsole: pending

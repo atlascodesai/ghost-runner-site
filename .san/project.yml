@@ -12,6 +12,8 @@ integrations:
   copy: []
   analytics:
     provider: goatcounter
+    domain: atlascodesai.github.io
+    searchConsoleProperty: https://atlascodesai.github.io/ghost-runner-site/
     siteId: ghostrunner
     publicDashboard: https://ghostrunner.goatcounter.com
     searchConsole: pending

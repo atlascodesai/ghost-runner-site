@@ -1,0 +1,19 @@
+schemaVersion: 1
+id: ghost-runner-site
+name: Ghost Runner site
+kind: webApplication
+summary: static marketing site for Ghost Runner, served from the repo root.
+capabilities: []
+platforms: []
+repository:
+  canonicalRemotes:
+    - https://github.com/atlascodesai/ghost-runner-site.git
+integrations:
+  copy: []
+  analytics:
+    provider: goatcounter
+    domain: atlascodesai.github.io
+    searchConsoleProperty: https://atlascodesai.github.io/ghost-runner-site/
+    siteId: ghostrunner
+    publicDashboard: https://ghostrunner.goatcounter.com
+    searchConsole: pending

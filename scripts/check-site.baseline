@@ -1,3 +1,2 @@
 # Pre-existing check-site.py failures on main (2026-09-29), ignored until fixed.
 # One entry per line: a failure as printed (without "FAIL ") or a bare page path.
-privacy.html: missing meta description  # privacy page has none yet
